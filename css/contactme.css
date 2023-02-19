@@ -1,0 +1,412 @@
+
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{
+    margin: 0;
+    font-family:'poppins';
+    background-color: rgba(229, 229, 203, 100%);
+}
+
+.wrapper
+{
+    max-width: 1200px;
+    margin: 0 auto;    
+}
+
+p, a, h1
+{
+    color: white;
+    margin: 0;
+}
+
+/* NavBar */
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav
+{
+    margin: 4em;
+}
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+    gap: 6.6em;
+    margin: 0;
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+nav a.active::before
+{
+    position: absolute;
+    content: "";
+    width: 85%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -1px; 
+}
+
+nav ul li a::before
+{
+    position: absolute;
+    content: "";
+    width:0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(138, 135, 135);
+    bottom: -1px; 
+    transition: width .8s;
+}
+
+nav ul li a:hover::before
+{
+    width: 85%;
+}
+
+#menu-bar
+{
+    display: none;
+}
+
+header label
+{
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+
+main
+{
+    background-color: rgba(213, 206, 163, 1);
+    width: 60vw;
+    height: 47.3em;
+    margin: 0 auto;
+    margin-top: 8.9em;
+    display: grid;
+}
+
+.box
+{
+    width: 40vw;
+    height: 36.9em;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    background-color: rgba(26, 18, 11, 1);
+    padding: 3.4em 6.6em;
+}
+
+.box h1
+{
+    margin: 0 auto;
+    margin-bottom: 1.3em;
+    font-size: 25px;
+    line-height: 3.0rem;
+    
+}
+
+.box p
+{
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 16px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+.box input
+{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 251, 251, 1);
+    font-weight: 300;
+    height: 2em;
+    font-weight: 600;
+    font-size: 1.8rem;
+    width: 20vw;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    color: white;
+}
+
+.box a
+{
+    padding: 1em 4.1em;
+    margin: 0 auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+    font-size: 2.0rem;
+    margin-top: 1.3em;
+    background-color: rgba(217, 217, 217, 0.25);
+}
+
+.box a:hover
+{
+    background-color: black;
+    color: lightgrey;
+}
+
+/* mobile phones */
+@media all and (max-width: 758px)
+{
+    .wrapper
+    {
+        height: 100vh;
+        position: relative;
+    }
+    header
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(229, 229, 203, 100%);
+    }
+
+    header label
+    {
+        display: initial;
+    }
+
+    header nav
+    {
+        position: absolute;
+        top: 100%;
+        margin: 0; 
+        left: 0;
+        right: 0;
+        background-color: lightgray;
+        border-top: 1px solid black;
+        display: none;
+    }
+
+    nav ul
+    {
+        list-style-type: none;
+        display: grid;
+        height: 50vh;
+        padding: 1em 0; 
+        margin: 0;
+        gap:0;
+    }
+
+    #menu-bar:checked ~ nav
+    {
+        display: initial;
+    }
+
+    nav ul li
+    {
+        display: grid;
+    }
+
+    nav ul li a
+    {
+        text-decoration: none;
+        color: black;
+        text-transform: capitalize;
+        font-size: 2.5rem;
+        text-align: center;
+        padding-top: 1em;
+        font-weight: 400;
+
+    }
+
+    
+
+    nav ul li a:hover
+    {
+        background-color: lightgrey;
+    }
+
+    nav a.active::before
+    {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-bottom: none;
+        bottom: 0; 
+    }
+
+    nav ul li a::before
+    {
+        position: absolute;
+        content: "";
+        width:0%;
+        height: 0px;
+        border-bottom: none;
+        bottom: 0; 
+        transition: width 0;
+    }
+
+    nav ul li a:hover::before
+    {
+        width: 0;
+
+    }
+
+    main
+    {
+        width: 80%;
+        padding: 0 10%;
+        height: 60vh;
+        margin: 0;
+        position: absolute;
+        top:20vh;
+        background-color: transparent;
+    }
+
+    .box
+    {
+        padding: 0;
+        width: 100%;
+        height: 90%;
+        display: grid;
+    }
+
+    .box h1
+    {
+        align-self: center;
+    }
+
+    .box p
+    {
+        display: none;
+    }
+
+    .box input
+    {
+        width: 70vw;
+    }
+
+    .box a
+    {
+        margin: auto ;
+        padding: 2vh 10vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

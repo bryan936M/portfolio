@@ -1,0 +1,146 @@
+body
+{
+    background-color:lightgrey;
+    font-family: 'roboto', sans-serif;
+
+}
+
+.signup-box
+{
+    width: 36em;
+    height: 62em;
+    margin: auto;
+    /* margin-top: 2em; */
+    background-color: white;
+    border-radius: .3em;
+}
+
+h1
+{
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+h4{
+    text-align: center;
+}
+
+form
+{
+    width: 30em;
+    margin-left: 2em;
+
+}
+
+form label
+{
+    display: flex;
+    margin-top: 2em;
+    font-size: 1.8rem;
+
+}
+
+form input
+{
+    width: 100%;
+    padding: .7em;
+    border: none;
+    border: 1px solid gray;
+    border-radius: .6em;
+    outline: none;
+}
+
+input[type="button"]
+{
+    width: 100%;
+    padding: .7em;
+    height: 3.5em;
+    margin-top: 2em;
+    border: none;
+    background-color: #49c1a2;
+    color: white;
+    font-size: 1.8rem;
+}
+
+p
+{
+    text-align: center;
+    padding-top: 2em;
+    font-size: 1.5rem;
+}
+
+.para-2
+{
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: -1em;
+
+}
+
+.para-2 a 
+{
+    color: #49c1a2;
+}
+
+@media all and (max-width: 480px)
+{
+    .signup-box
+    {
+        width: 80vw;
+        height: 100vh;
+    }
+
+    form
+    {
+        width: 72.5vw;
+    }
+
+    form input
+    {
+        width: 80%;
+        padding: .7em;
+        border: none;
+        border: 1px solid gray;
+        border-radius: .6em;
+        outline: none;
+    }
+
+    form label
+    {
+        margin-top: 1.5em;
+        font-size: 1.4rem;
+    }
+
+    input[type="button"]
+    {
+        width: 86%;
+    }
+
+    p
+    {
+        font-size: 1.0rem;
+    }
+    
+    .para-2
+    {
+        font-size: 1rem;
+        color: #344a72;
+        margin-top: -10em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

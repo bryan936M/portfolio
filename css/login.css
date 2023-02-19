@@ -1,0 +1,357 @@
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{
+    margin: 0;
+    font-family:'poppins';
+    background-color: rgba(229, 229, 203, 100%);
+}
+
+.wrapper
+{
+    max-width: 1200px;
+    margin: 0 auto;    
+}
+
+/* NavBar */
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav
+{
+    margin: 4em;
+}
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+    gap: 6.6em;
+    margin: 0;
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+nav a.active::before
+{
+    position: absolute;
+    content: "";
+    width: 85%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -1px; 
+}
+
+nav ul li a::before
+{
+    position: absolute;
+    content: "";
+    width:0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(138, 135, 135);
+    bottom: -1px; 
+    transition: width .8s;
+}
+
+nav ul li a:hover::before
+{
+    width: 85%;
+}
+
+main
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background: ;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.center
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 0px;
+}
+
+.center h1
+{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.center form
+{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt-field
+{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.txt-field input
+{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt-field label
+{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.txt-field span::before
+{
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+
+.txt-field input:focus ~ label,
+.txt-field input:valid ~ label
+{
+    top: 5px;
+    color: #2691d9;
+}
+
+.txt-field input:focus ~ span::before,
+.txt-field input:valid ~ span::before
+{
+    width: 100%;
+}
+
+.pass
+{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.pass:hover
+{
+    text-decoration: underline;
+}
+
+input[type="submit"]
+{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: rgba(217,217,217,25%);
+    border-radius: 0px;
+    font-size: 18px;
+    color: #white;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover
+{
+    border-color: #2691d9;
+    transition: .5s;
+}
+
+.signup-link
+{
+    margin: 50px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.signup-link a
+{
+    color: #2691d9;
+    text-decoration: none;
+}
+
+.signup-link a:hover
+{
+    text-decoration: underline;
+}
+
+#menu-bar
+{
+    display: none;
+}
+
+header label
+{
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+
+@media all and (max-width: 758px)
+{
+    header
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(229, 229, 203, 100%);
+    }
+
+    header label
+    {
+        display: initial;
+    }
+
+    header nav
+    {
+        position: absolute;
+        top: 100%;
+        margin: 0; 
+        left: 0;
+        right: 0;
+        background-color: lightgray;
+        border-top: 1px solid black;
+        display: none;
+    }
+
+    nav ul
+    {
+        list-style-type: none;
+        display: grid;
+        padding: 1em 0; 
+        height: 50vh;
+        margin: 0;
+        gap:0;
+    }
+
+    #menu-bar:checked ~ nav
+    {
+        display: initial;
+    }
+
+    nav ul li
+    {
+        display: grid;
+
+    }
+
+    nav ul li a
+    {
+        text-decoration: none;
+        color: black;
+        text-transform: capitalize;
+        font-size: 2.5rem;
+        text-align: center;
+        padding-top: 1em;
+        font-weight: 400;
+    }
+    
+
+    nav ul li a:hover
+    {
+        background-color: lightgrey;
+    }
+
+    nav a.active::before
+    {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-bottom: none;
+        bottom: 0; 
+    }
+
+    nav ul li a::before
+    {
+        position: absolute;
+        content: "";
+        width:0%;
+        height: 0px;
+        border-bottom: none;
+        bottom: 0; 
+        transition: width 0;
+    }
+
+    nav ul li a:hover::before
+    {
+        width: 0;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

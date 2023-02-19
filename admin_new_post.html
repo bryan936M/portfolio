@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../andelaPortfolio/CSS/admin_new_post.css">
+    <script type="text/javascript">
+        function togglemenu()
+        {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        
+    
+        <aside id="sidebar" onclick="togglemenu()">
+            <div class="toggle-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span class="line"></span>
+            <p class="big-title">Dashboard</p>
+            <div class="links">
+                <a href="admin_home.html">Main</a>
+                <a href="admin_new_post.html" class="active">New Post</a>
+                <a href="admin_messages.html">Messages</a>
+                <a href="#">Log Out</a>
+            </div>
+        </aside>
+        
+        <div class="right-side">
+            <header>
+                <span>Admin</span>
+                <span>/</span>
+                <span>New Post</span>
+            </header>
+            <main>
+                <p class="blog-word">blog</p>
+                <span class="line dark"></span>
+
+                <div class="title-section">
+                    <p>Title</p>
+                    <input type="text" placeholder="Title" class="title-bar">
+                </div>
+                <span class="line light"></span>
+
+                <div class="description-section">
+                    <p>Sub title</p>
+                    <textarea class="desc-area" placeholder="Sub-title" ></textarea>
+                </div>
+                <span class="line light"></span>
+
+                <div class="blog-section">
+                    <p>Blog</p>
+                    <textarea class="blog-area"></textarea>
+                </div>
+
+                <div class="button-space">
+                    <a href="#" class="">Save to drafts</a>
+                    <a href="#" class="">Post</a>
+                    <a href="#" class="">Discard</a>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
