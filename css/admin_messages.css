@@ -187,13 +187,50 @@ main .messages-section .message-row > p, a
     font-size: 15px;
 }
 
-main .messages-section .message-row > a
+main .messages-section .message-row .action-links
 {
-    padding: 0.5em 1.5em;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+main .messages-section .message-row .action-links a
+{
+    padding: 0.10em 0.4em;
     font-size: 2rem;
-    background-color: #a7a491;
+    background-color: ;
     color: black;
-    border-radius: 1em;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+main .messages-section .message-row .action-links a:hover
+{
+    background-color: rgb(243, 240, 240);
+    color: ;
+    border: 1px solid transparent;
+}
+
+
+main .messages-section .message-row .action-links button
+{
+    padding: 0.10em 0.4em;
+    font-size: 2rem;
+    background-color: rgb(147, 146, 146);
+    color: black;
+    border: 0;
+    border-radius: 4px;
+}
+
+main .messages-section .message-row .action-links button:hover
+{
+    cursor: pointer;
+    background-color: rgb(172, 1, 1);
+    color: lightgoldenrodyellow;
+}
+
+.test
+{
+    justify-self: flex-start;
 }
 
 @media all and (max-width: 758px)
@@ -256,6 +293,21 @@ main .messages-section .message-row > a
         width: 90%;
         height:92vh;
         
+    }
+
+    main .head-section
+    {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+
+    main .messages-section .message-row
+    {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+
+    main .messages-section .message-row > a
+    {
+        padding: 0.5em 0.5em;
     }
 
     .test

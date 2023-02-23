@@ -39,34 +39,35 @@
                 <span>/</span>
                 <span>New Post</span>
             </header>
-            <main>
+            <form>
                 <p class="blog-word">blog</p>
                 <span class="line dark"></span>
 
                 <div class="title-section">
                     <p>Title</p>
-                    <input type="text" placeholder="Title" class="title-bar">
+                    <input type="text" name="title" placeholder="Title" class="title-bar">
                 </div>
                 <span class="line light"></span>
 
                 <div class="description-section">
-                    <p>Sub title</p>
-                    <textarea class="desc-area" placeholder="Sub-title" ></textarea>
+                    <p>Image</p>
+                    <input type="text" name="blogimage" class="desc-area">
                 </div>
                 <span class="line light"></span>
 
                 <div class="blog-section">
                     <p>Blog</p>
-                    <textarea class="blog-area"></textarea>
+                    <textarea class="blog-area" name="blog"></textarea>
                 </div>
 
                 <div class="button-space">
-                    <a href="#" class="">Save to drafts</a>
-                    <a href="#" class="">Post</a>
-                    <a href="#" class="">Discard</a>
+                    <button type="submit" class="postBtn">Post</button>
+                    <button type="reset" class="">Discard</button>
+                    <!-- <input type="text" id="imageInput" accept="image/*"> -->
                 </div>
-            </main>
+            </form>
         </div>
     </div>
+    <script src="js/adminnewpost.js"></script>
 </body>
 </html>

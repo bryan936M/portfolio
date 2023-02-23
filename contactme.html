@@ -31,21 +31,22 @@
         </header>
 
         <main>
-            <div class="box">
+            <form class="box">
                 <h1>Get in touch</h1>
                 <p>
                     HEY YOU, FEEL FREE TO LEAVE A MESSAGE HERE AND YOU WILL <BR>
                      RECEIVE A RESPONSE NO LATER THAN A DAY AFTER.  CHEERS!
                 </p>
                 
-                <input type="text" placeholder="Your Name" class="nm-input">
-                <input type="email" placeholder="Your Email" class="email-input">
-                <input type="text" placeholder="Your message" class="msg-input">
+                <input type="text" name="contactName" placeholder="Your Name" class="nm-input">
+                <input type="email" name="contactEmail" placeholder="Your Email" class="email-input">
+                <input type="text" name="theMessage" placeholder="Your message" class="msg-input">
                 
-                <a href="#">Send</a>
-            </div>
+                <button type="submit">Send</button>
+            </form>
         </main>
 
     </div>
+    <script src="js/contactme.js"></script>
 </body>
 </html>
