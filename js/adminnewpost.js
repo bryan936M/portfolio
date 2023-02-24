@@ -23,7 +23,7 @@ const createPost = async(e) => {
         }
     });
 
-    window.location.replace('/admin_home.html');
+    window.location.replace('admin_home.html');
 }
 
 form.addEventListener('submit', createPost)
