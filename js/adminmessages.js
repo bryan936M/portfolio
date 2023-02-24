@@ -33,7 +33,7 @@ const renderMessages = async(e) => {
                 const id = e.target.dataset.id;
                 console.log("Delete button clicked for id = " + id);
 
-                const res = await fetch(' http://localhost:3001/messages/' + id, {
+                const res = await fetch(' https://erin-cautious-alligator.cyclic.app/messages/' + id, {
                     method: 'Delete'
                 });
             });

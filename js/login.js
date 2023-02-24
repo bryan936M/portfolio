@@ -9,7 +9,7 @@ const verify = async(e) =>{
     console.log('it works');
     console.log(email + password);
 
-    const res = await fetch('http://localhost:3001/users');
+    const res = await fetch('https://erin-cautious-alligator.cyclic.app/users');
     const user_array = await res.json();
     console.log(user_array);
 

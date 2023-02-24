@@ -4,7 +4,7 @@ const form = document.querySelector('form');
 const createPost = async(e) => {
     e.preventDefault();
 
-    let uri = 'http://localhost:3001/posts';
+    let uri = 'https://erin-cautious-alligator.cyclic.app/posts';
 
     const doc = {
         "article_image": form.blogimage.value,

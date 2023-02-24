@@ -10,7 +10,7 @@ const saveMessage = async(e) => {
     };
     console.log(doc);
 
-    await fetch('http://localhost:3001/messages',{
+    await fetch('https://erin-cautious-alligator.cyclic.app/messages',{
         method: 'POST',
         body: JSON.stringify(doc),
         headers: {

@@ -4,7 +4,7 @@ const container = document.querySelector('.blog-content');
 const form = document.querySelector('form');
 
 const renderBlog = async() => {
-    const res = await fetch('http://localhost:3001/posts/' + id);
+    const res = await fetch('https://erin-cautious-alligator.cyclic.app/posts/' + id);
     const post = await res.json();
     console.log(post);
     

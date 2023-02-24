@@ -14,7 +14,7 @@ form.addEventListener('submit', function(event) {
     }
     console.log(doc);
 
-    fetch('http://localhost:3001/users',{
+    fetch('https://erin-cautious-alligator.cyclic.app/users',{
         method: 'POST',
         body: JSON.stringify(doc),
         headers: {

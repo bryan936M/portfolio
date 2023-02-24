@@ -2,7 +2,7 @@
 const container = document.querySelector('.wrapper');
 const id = new URLSearchParams(window.location.search).get('id')
 const renderDetails = async() => {
-    const res = await fetch('http://localhost:3001/posts/' + id);
+    const res = await fetch('https://erin-cautious-alligator.cyclic.app/posts/' + id);
     const post = await res.json();
     console.log(post);
 

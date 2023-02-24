@@ -2,7 +2,7 @@
 const container = document.querySelector('main');
 
 const renderPosts = async() => {
-    let uri = "http://localhost:3001/posts";
+    let uri = "https://erin-cautious-alligator.cyclic.app/posts";
 
     const res = await fetch(uri);
     const posts = await res.json();
