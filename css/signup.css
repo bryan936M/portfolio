@@ -50,7 +50,7 @@ form input
     outline: none;
 }
 
-input[type="button"]
+button
 {
     width: 100%;
     padding: .7em;
@@ -60,6 +60,7 @@ input[type="button"]
     background-color: #49c1a2;
     color: white;
     font-size: 1.8rem;
+    cursor: pointer;
 }
 
 p
@@ -112,7 +113,7 @@ p
         font-size: 1.4rem;
     }
 
-    input[type="button"]
+    button
     {
         width: 86%;
     }

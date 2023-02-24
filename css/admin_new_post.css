@@ -112,7 +112,7 @@ header > span
     text-transform: uppercase;
 }
 
-main
+form
 {
     margin-top: 2em;
     background: #C9C9C9;
@@ -123,7 +123,7 @@ main
     gap: 1em;
 }
 
-main .blog-word
+form .blog-word
 {
     font-family: 'Arima Madurai';
     font-weight: 400;
@@ -140,14 +140,14 @@ main span
     background-color: black;
 }
 
-main .title-section
+form .title-section
 {
     margin-top: 3.8em;
     display: flex;
     gap: 11.1em;
 }
 
-main .title-section p
+form .title-section p
 {
     font-weight: 600;
     font-size: 2.5em;
@@ -155,7 +155,7 @@ main .title-section p
     align-self: center;
 }
 
-main .title-section .title-bar
+form .title-section .title-bar
 {
     flex-grow: 1;
     font-size: 2.5rem;
@@ -165,14 +165,14 @@ main .title-section .title-bar
     border: 5px solid #c4c4c4;
 }
 
-main .description-section
+form .description-section
 {
     margin-top: 3.8em;
     display: flex;
     gap: 11.1em;
 }
 
-main .description-section p
+form .description-section p
 {
     font-weight: 600;
     font-size: 2.5em;
@@ -180,45 +180,41 @@ main .description-section p
     align-self:flex-start;
 }
 
-main .description-section .desc-area
+form .description-section .desc-area
 {
     background-color: #dddd;
-    color: #666666;
+    background-size: cover;
+    background-position: center;
     padding: 1em;
     border-radius: 1em;
     border: 3px solid transparent;
     outline: none;
     flex-grow: 1;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    font-size: 2rem;
-    height: 2.7em;
+    height: 3.7em;
     transition: all 0.2s;
 
 }
 
-main .description-section .desc-area:hover
+form .description-section .desc-area:hover
 {
     cursor: pointer;
     background-color: #eeeeee;
 }
 
-main .description-section .desc-area:focus
+form .description-section .desc-area:focus
 {
-    cursor: text;
-    color: #333333;
     background-color: white;
     border-color: #333333;
 }
 
-main .blog-section
+form .blog-section
 {
     margin-top: 2.8em;
     display: flex;
     gap: 11.1em;
 }
 
-main .blog-section p
+form .blog-section p
 {
     font-weight: 600;
     font-size: 2.5em;
@@ -226,7 +222,7 @@ main .blog-section p
     width: 12.3rem;
 }
 
-main .blog-section .blog-area
+form .blog-section .blog-area
 {
     background-color: #dddd;
     color: #666666;
@@ -243,13 +239,13 @@ main .blog-section .blog-area
     flex-grow: 1;
 }
 
-main .blog-section .blog-area:hover
+form .blog-section .blog-area:hover
 {
     cursor: pointer;
     background-color: #eeeeee;
 }
 
-main .blog-section .blog-area:focus
+form .blog-section .blog-area:focus
 {
     cursor: text;
     color: #333333;
@@ -257,14 +253,16 @@ main .blog-section .blog-area:focus
     border-color: #333333;
 }
 
-main .button-space
+form .button-space
 {
     margin-top: 1em;
     display: flex;
     flex-flow: row-reverse;
+    align-items: center;
+    justify-content: right;
 }
 
-main .button-space a
+form .button-space button
 {
     padding: 0.5em 1.5em;
     font-size: medium;
@@ -272,6 +270,7 @@ main .button-space a
     background-color: black;
     color: rgb(173, 168, 168);
     margin-right: 1em;
+    cursor: pointer;
     
 }
 
@@ -334,55 +333,66 @@ main .button-space a
     {
         width:60%;
         padding: 0 20%;
+        height: 7vh;
     }
 
-    main
+    form
     {
         padding: 4.1em 0;
+        height: 83vh;
     }
 
-    main p
+    form p
     {
         padding-left: 5vw;
     }
 
-    main .title-section
+    form .title-section
     {
         gap: 1em;
         flex-direction: column;
         
     }
-    main .title-section input
+    form .title-section input
     {
         width: 85%;
         margin: 0 auto;       
     }
-    main .description-section textarea
+    form .description-section textarea
     {
         width: 80%;
         margin: 0 auto;       
     }
-    main .blog-section textarea
+    form .blog-section textarea
     {
         width: 80%;
         margin: 0 auto;       
     }
 
-    main .title-section p
+    form .title-section p
     {
         align-self: flex-start;
         
     }
 
-    main .description-section
+    form .description-section
     {
         gap: 1em;
         flex-direction: column;
+        margin-top: 0;
     }
 
-    main .blog-section
+    form .description-section .desc-area
+    {
+        width: 90%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    form .blog-section
     {
         gap: 1em;
         flex-direction: column;
+        margin-top: 0;
     }
 }

@@ -195,10 +195,20 @@ header > span
 .recent-blogs .blogs-section .record
 {
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     background-color: black;
     align-items: center;
+    justify-items: center;
+}
+
+.recent-blogs .blogs-section .record .links
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
 }
 
 .recent-blogs .blogs-section .record p, a
@@ -206,6 +216,45 @@ header > span
     color: white;
     font-weight: 400;
     font-size: 1.5rem;
+    flex-grow: 1;
+    text-align: center;
+    padding: 1vh;
+}
+
+.recent-blogs .blogs-section .record a
+{
+    font-weight: 600;
+}
+
+.recent-blogs .blogs-section .record a:hover
+{
+    background-color: #353775;
+    color: lightblue;
+}
+
+.open-link
+{
+    background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.recent-blogs .blogs-section .record .links button
+{
+    background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+.recent-blogs .blogs-section .record .links button:hover
+{
+    background-color: rgb(98, 1, 1);
+    color: rgb(249, 213, 213);
+    cursor: pointer;
 }
 
 @media all and (max-width: 758px)

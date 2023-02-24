@@ -149,9 +149,10 @@ main
     color: white;
 }
 
-.box a
+.box button
 {
-    padding: 1em 4.1em;
+    padding: 0.5em 2em;
+    border-radius: 3px;
     margin: 0 auto;
     text-decoration: none;
     text-transform: uppercase;
@@ -160,6 +161,8 @@ main
     font-size: 2.0rem;
     margin-top: 1.3em;
     background-color: rgba(217, 217, 217, 0.25);
+    border: 0;
+    cursor: pointer;
 }
 
 .box a:hover
@@ -307,7 +310,7 @@ main
         width: 70vw;
     }
 
-    .box a
+    .box button
     {
         margin: auto ;
         padding: 2vh 10vw;
