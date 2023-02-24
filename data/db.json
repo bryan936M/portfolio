@@ -46,22 +46,13 @@
       "id": 5
     },
     {
-      "article_image": null,
-      "title": "test 2",
-      "body": "content once more",
+      "article_image": "https://images.unsplash.com/photo-1484278786775-527ac0d0b608?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyOTk0OTR8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+      "title": "Andela",
+      "body": "This is some blog test",
       "likes": null,
       "dislikes": null,
       "comment": null,
       "id": 6
-    },
-    {
-      "article_image": "https://images.unsplash.com/photo-1484278786775-527ac0d0b608?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyOTk0OTR8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
-      "title": "test 3",
-      "body": "loyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
-      "likes": null,
-      "dislikes": null,
-      "comment": null,
-      "id": 7
     }
   ],
   "users": [
@@ -71,6 +62,13 @@
       "lastName": "Murasira",
       "email": "bryanmurasira@gmail.com",
       "password": "password123"
+    },
+    {
+      "firstName": "a",
+      "lastName": "b",
+      "email": "c@dmc.com",
+      "password": "123",
+      "id": 2
     }
   ],
   "messages": [
@@ -81,16 +79,16 @@
       "msg": "First Message"
     },
     {
-      "name": "Steven",
-      "email": "steven@email.com",
-      "msg": "Hello World",
-      "id": 2
-    },
-    {
       "name": "Dylan",
       "email": "Dylan@gmail.com",
       "msg": "Hello World 2",
       "id": 3
+    },
+    {
+      "name": "Latifah",
+      "email": "latifahkayisime@gmail.com",
+      "msg": "Hello Bryan",
+      "id": 5
     }
   ]
 }

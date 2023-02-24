@@ -16,20 +16,28 @@ const renderPosts = async() => {
                 <p class="date">12/11/2022</p>
                 <div class="links">
                     <a class="open-link" href="adminopenblog.html?id=${post.id}">Open</a>
-                    <button class="button">Delete</button>
+                    <button class="button" data-id = "${post.id}" >Delete</button>
                 </div>
             </div>
         `
-
-        // deleteBtn.addEventListener('click', async (e) => {
-        //     const res = await fetch('http://localhost:3000/posts/' + post.id, {
-        //         method: 'DELETE'
-        //     })
-        //     window.location.replace('/admin_home.html');
-        // })
     })
 
     container.innerHTML = template;
+
+    const deleteBtns = document.querySelectorAll('.button');
+    deleteBtns.forEach(button =>{
+        button.addEventListener('click', async(e) => {
+            const id = e.target.dataset.id;
+            console.log("Click by button " + id);
+
+            const res = await fetch(' http://localhost:3001/posts/' + id, {
+                method: 'Delete'
+            });
+        });
+    });
+    
+
+    
 
 }
 
