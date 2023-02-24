@@ -3,7 +3,7 @@
 const container = document.querySelector('.messages-section');
 
 const renderMessages = async(e) => {
-    let uri = 'http://localhost:3001/messages';
+    let uri = 'https://erin-cautious-alligator.cyclic.app/messages';
 
     try{
         const res = await fetch(uri);
