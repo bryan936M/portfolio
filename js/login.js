@@ -15,9 +15,9 @@ const verify = async(e) =>{
 
     user_array.forEach(user => {
         if(user.email === email.value && user.password == password.value){
-            window.location.replace('/admin_home.html');
+            window.location.replace('admin_home.html');
         } else {
-            window.location.replace('/index.html');
+            window.location.replace('index.html');
         }
     });
 
