@@ -17,7 +17,7 @@ const verify = async(e) =>{
         if(user.email === email.value && user.password == password.value){
             window.location.replace('admin_home.html');
         } else {
-            window.location.replace('index.html');
+            //window.location.replace('index.html');
         }
     });
 
