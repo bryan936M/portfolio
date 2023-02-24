@@ -3,7 +3,7 @@
 const deleteBtn = document.querySelector('.button');
 const container = document.querySelector('.blogs-section');
 const renderPosts = async() => {
-    let uri = ' https://prickly-lab-coat-fawn.cyclic.app/posts?_sort=id&_order=desc';
+    let uri = ' http://localhost:3000/posts?_sort=id&_order=desc';
     const res = await fetch(uri);
     const posts = await res.json();
     console.log(posts);
