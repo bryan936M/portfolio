@@ -1,3 +1,5 @@
+/* Basic layout css */
+
 html
 {
     font-size: 62.5%;
@@ -12,6 +14,247 @@ body
 
 .wrapper
 {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;    
 }
+
+h1, h2, h3, p, a, img
+{
+    padding: 0; margin: 0;
+}
+
+/* NavBar */
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    height: 14.64vh;
+}
+
+nav
+{
+    margin: 4em;
+    margin-right: 0;
+    max-width: 100%;
+}
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+    gap: 6.6em;
+    margin: 0;
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+nav a.active::before
+{
+    position: absolute;
+    content: "";
+    width: 85%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -1px; 
+}
+
+nav ul li a::before
+{
+    position: absolute;
+    content: "";
+    width:0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(138, 135, 135);
+    bottom: -1px; 
+    transition: width .8s;
+}
+
+nav ul li a:hover::before
+{
+    width: 85%;
+}
+
+#menu-bar
+{
+    display: none;
+}
+
+header label
+{
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+/* blog content css */
+
+.blog-content
+{
+   width: 100%; 
+}
+
+.post
+{
+    /* height: calc(100vh); */
+    padding-bottom: 10vh;
+    display: grid;
+    grid-auto-rows:min-content;
+    background-color: rgb(210, 229, 203);
+    box-shadow: 20px 20px 50px  #333;
+}
+
+.post img
+{
+    margin-top: 15vh;
+    margin-bottom: 2.6vh;
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+}
+.post h1
+{
+    margin: 0 auto; 
+    font-size: 4rem;
+    margin-bottom: 6vh;
+    text-transform: uppercase;
+}
+
+.post p
+{
+    padding: 0 9vw;
+    font-size: 2.5rem;
+    line-height: 1.4;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.post .like-dislike
+{
+    margin: 5vh 0;
+    padding-left: 9vw;
+    display: flex;
+    gap: 3vw;
+}
+
+.post .nums
+{
+    padding: 0;
+    padding: .75vh 2.5vw;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/* comment section css */
+.comment-section
+{
+    /* margin: 0 auto; */
+    margin-top: 10vh;
+    padding: 4vh 0;
+    display: grid;
+    grid-auto-columns: 60%;
+    margin-left: 9vw;
+    gap: 3vh;
+}
+
+h3, p
+{
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.comment
+{
+    display: flex;
+    flex-direction: column;
+    gap: .5vh;
+
+}
+
+.comment #comment
+{
+    height: 20vh;
+    border: 2px solid transparent;
+    outline: none;
+}
+.comment #comment:hover
+{
+    border-color: #b2adad66;
+    cursor: pointer;
+}
+.comment #comment:focus
+{
+    border-color: #3333335e;
+    cursor: text;
+}
+
+.personal-info
+{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 7vh;
+    width: 100%;
+    gap: 10%;
+}
+
+.personal-info input
+{
+    border: transparent;
+    outline: none;
+}
+
+.submit-btn
+{
+    width: 35%;
+    height: 7.5vh;
+    border: transparent;
+    cursor: pointer;
+    font-size: 1.7rem;
+    
+    background-color: #B7B7A4;
+}
+
+.submit-btn:hover
+{
+    background-color: #DDBEA9;
+}
+
+.like-dislike
+{
+    display: flex;
+    justify-content: left;
+    gap: 3.5%;
+}
+
+.like-dislike button
+{
+    width: 9vw;
+    height: 6.5vh;
+    padding: 0;
+    border: transparent;
+    color: rgb(255, 255, 255);
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+.like-btn:hover
+{
+    background-color: rgb(233, 233, 76);
+}
+.dislike-btn:hover
+{
+    background-color: rgb(181, 56, 56);
+}
+
+/* all-comments css */
