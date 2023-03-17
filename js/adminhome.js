@@ -3,7 +3,7 @@
 const deleteBtn = document.querySelector('.button');
 const container = document.querySelector('.blogs-section');
 const renderPosts = async() => {
-    let uri = ' https://erin-cautious-alligator.cyclic.app/posts?_sort=id&_order=desc';
+    let uri = ' https://cute-pear-sheep-slip.cyclic.app/posts/';
     const res = await fetch(uri);
     const posts = await res.json();
     console.log(posts);
@@ -15,8 +15,8 @@ const renderPosts = async() => {
                 <p class="title">${post.title}</p>
                 <p class="date">12/11/2022</p>
                 <div class="links">
-                    <a class="open-link" href="adminopenblog.html?id=${post.id}">Open</a>
-                    <button class="button" data-id = "${post.id}" >Delete</button>
+                    <a class="open-link" href="adminopenblog.html?id=${post._id}">Open</a>
+                    <button class="button" data-id = "${post._id}" >Delete</button>
                 </div>
             </div>
         `
@@ -30,7 +30,7 @@ const renderPosts = async() => {
             const id = e.target.dataset.id;
             console.log("Click by button " + id);
 
-            const res = await fetch(' https://erin-cautious-alligator.cyclic.app/posts/' + id, {
+            const res = await fetch(' https://cute-pear-sheep-slip.cyclic.app/posts/' + id, {
                 method: 'Delete'
             });
         });

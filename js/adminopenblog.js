@@ -4,9 +4,12 @@ const id = new URLSearchParams(window.location.search).get('id');
 
 
 const renderDetails = async() => {
-    const res = await fetch('https://erin-cautious-alligator.cyclic.app/posts/' + id);
+    const res = await fetch('https://cute-pear-sheep-slip.cyclic.app/posts/' + id);
     const post = await res.json();
     console.log(post);
+    if(post.message){
+        alert(post.message);
+    }
 
     const template = `
         <form>
@@ -36,7 +39,8 @@ const renderDetails = async() => {
         console.log('update button pressed.');
 
         let doc = {
-            article_image: form.image,
+            "id": "640cb328d851f265dcde6973",
+            article_image: form.image.value,
             title: form.title.value,
             body: form.blogcontent.value,
         };
@@ -44,10 +48,20 @@ const renderDetails = async() => {
 
         let options = {
             method: 'PUT',
-            body: JSON.stringify(doc)
+            body: JSON.stringify(doc),
+            headers: {
+                'Content-Type': 'application/json'
+            }
         }
 
-        await fetch('https://erin-cautious-alligator.cyclic.app/posts/' + id, options).then(response => console.log(response.status));
+        await fetch('https://cute-pear-sheep-slip.cyclic.app/posts/', options)
+            .then((response) => { return response.json() })
+            .then((data) => {
+                console.log(data);
+                if (data.message) {
+                    alert(data.message);
+                }
+            });
     });
 
 }

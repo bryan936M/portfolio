@@ -11,7 +11,7 @@ let likes = 0;
 
 
 const renderBlog = async() => {
-    const res = await fetch('https://erin-cautious-alligator.cyclic.app/posts/' + id);
+    const res = await fetch('https://cute-pear-sheep-slip.cyclic.app/posts/' + id);
     const post = await res.json();
     console.log(post);
     

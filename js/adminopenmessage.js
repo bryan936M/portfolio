@@ -4,7 +4,7 @@ console.log(id);
 const container = document.querySelector('.msg-box');
 
 const renderMessages = async() => {
-    const res = await fetch('https://erin-cautious-alligator.cyclic.app/messages/'+id);
+    const res = await fetch('https://cute-pear-sheep-slip.cyclic.app/messages/'+id);
     const msg = await res.json();
     console.log(msg);
 
