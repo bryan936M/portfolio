@@ -9,6 +9,32 @@
 </head>
 <body>
     <div class="wrapper">
+        <header>
+
+            <a href="#" class="brand"><img src="images/logo.svg" alt="Bryan Murasira Logo"></a>
+            
+            <input type="checkbox" id="menu-bar">
+            <label for="menu-bar">Menu</label>
+
+
+            <nav>
+
+                <label class="navbar-toggle" for="toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="aboutMe.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blogspot.html">Blog</a></li>
+                    <li><a href="login.html" class="login">Login</a></li>
+                </ul>
+            </nav>
+
+        </header>
         <section class="blog-content">
             <!-- space for injecting the blog -->
     
@@ -19,18 +45,19 @@
             <p>Your email address will not be published!</p>
             <div class="comment">
                 <p>Comment</p>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="" id="comment"></textarea>
             </div>
             <div class="personal-info">
-                <input type="text" name="name_input" class="input_nm">
-                <input type="email" name="email_input" class="input_eml">
+                <input type="text" name="name_input" placeholder="Name" class="input_nm">
+                <input type="email" name="email_input" placeholder="Email" class="input_eml">
             </div>
-            <div class="like-dislike">
-                <button>Like</button>
-                <button>Dislike</button>
-            </div>
-            <button type="submit">Post Comment</button>
+            <button type="submit" class="submit-btn">Post Comment</button>
         </form>
+
+        <div class="all-comments">
+            <!-- inject all comments for the blog -->
+
+        </div>
     </div>
 
     <script src="js/blogpage.js"></script>

@@ -23,10 +23,11 @@ p, a, h1{
 
 header
 {
-    display: flex;
-    justify-content:space-between;
     height: 100%;
     max-height: 10vh;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content:space-between;
 }
 
 .left-side
@@ -60,91 +61,65 @@ header
     color: black;
 }
 
-.search-section
-{
-    width: 100%;
-    min-width: 40vh;
-    background-color: rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    border-radius: 60px;
-    padding: 2vh 3vh;
-}
-
-.search-section input
-{
-    flex: 1;
-    background-color: transparent;
-    border: 0;
-    outline: none;
-    height: 100%;
-    color: black;
-}
-
-.search-section input::placeholder
-{
-    color: rgb(123, 111, 111);
-    font-size: 1.6rem;
-}
-
-.search-section button img
-{
-    width: 25px;
-}
-
-.search-section button
-{
-    width: 40px;
-    height: 40px;
-    border: 0;
-    border-radius: 50%;
-    cursor: pointer;
-}
 
 main
 {
-    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    height: max(85vh);
     width: 90%;
     padding: 5vh 5%;
     padding-bottom: 0;
-    height: max(85vh);
-    display: flex;
-    flex-direction: column;
     overflow-y: auto;
+    background-color: #9d977f;
 }
 
 .post
 {
-    background-color: rgb(229, 219, 203);;
-    height: 100%;
-    margin: 1vh 0;
-    padding: 1vh;
-    display: flex;
-    gap: 1vw;
+    background-color: rgb(54, 48, 48);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: 30vh;
+    gap: 1vh;
 }
 
 .post img
 {
-    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .post .description
 {
+    width: 100%;
     display: grid;
     grid-auto-rows: 1fr;
     align-items: center;
 }
+.post .description h1
+{
+    font-size: 2.7rem;
+    color: rgb(184, 180, 180);
+}
 .post .description p
 {
-    font-size: 1.3rem;
+    color: #7a7f73;
+    width: 90%;
+    font-size: 1.7rem;
+}
+.post .description p.polls
+{
+    color: white;
 }
 
 .post .description a
 {
     /* background-color: rgb(151, 133, 108); */
-    color: rgb(205, 221, 245);
-    background-color: rgb(0, 99, 228);
-    font-size: 1.5rem;
+    color: rgb(189, 188, 188);
+    background-color: #455857;;
+    font-size: 1.6rem;
     font-weight: bold;
     text-decoration: none;
     text-transform: capitalize;
