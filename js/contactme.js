@@ -10,7 +10,7 @@ const saveMessage = async(e) => {
     };
     console.log(doc);
 
-    await fetch('https://erin-cautious-alligator.cyclic.app/messages',{
+    await fetch('https://cute-pear-sheep-slip.cyclic.app/messages',{
         method: 'POST',
         body: JSON.stringify(doc),
         headers: {
