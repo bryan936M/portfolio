@@ -15,7 +15,6 @@ const renderPosts = async() => {
                 <div class="description">
                     <h1>${post.title}</h1>
                     <p class="body">${post.body.slice(0, 200)}</p>
-                    <p class="polls">Likes: ${post.likes}    Dislikes: ${post.dislikes}</p>
                     <a href="/blogpage.html?id=${post.id}"  class="read-more">Read more...</a>
                 </div>        
             </div>

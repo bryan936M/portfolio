@@ -12,6 +12,7 @@ const renderDetails = async() => {
         <form>
             <img src="${post.article_image}" alt="">
             <textarea name="title" class="title"></textarea>
+            <textarea name="image" class="imgURL"></textarea>
             <textarea name="blogcontent" class = "blog-content"></textarea>
             <div class="link-section">
                 <a href="admin_home.html">Go back</a>
@@ -26,6 +27,8 @@ const renderDetails = async() => {
     blogText.innerHTML = post.body;
     const titleText = document.querySelector('.title');
     titleText.innerHTML = post.title;
+    const blogImage = document.querySelector('.imgURL');
+    blogImage.innerHTML = post.article_image;
 
     const form = document.querySelector('form');
     form.addEventListener('submit', async(e) => {
@@ -33,12 +36,9 @@ const renderDetails = async() => {
         console.log('update button pressed.');
 
         let doc = {
-            article_image: post.article_image,
-            id: post.id,
+            article_image: form.image,
             title: form.title.value,
             body: form.blogcontent.value,
-            likes: post.likes,
-            dislikes: post.dislikes
         };
         console.log(doc);
 

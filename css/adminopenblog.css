@@ -37,6 +37,7 @@ img
     margin: 0;
     padding: 0;
     min-height: 87vh;
+    grid-auto-rows: min-content;
     width: 100%;
     /* color: darkslategrey; */
     background-color: transparent;
@@ -44,23 +45,29 @@ img
     box-shadow: 10px 10px 50px black;
     font-size: 3.5rem;
     outline: none;
+    resize: block;
 }
 
 .title
 {
-    margin: 0 auto;
-    margin: 10vh 0;
-    height:10vh;
-    width: fit-content;
+    margin: 10vh auto;
+    width: auto;
+    justify-self:center;
+    text-align: center;
     outline: none;
     border: 3px solid black;
-    justify-self: center;
     background-color: transparent;
-    font-size: 4rem;
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    font-size: 4rem;     
+}
+
+.imgURL
+{
+    width: 100%;
+    margin-bottom: 10vh;
+    font-size: 2rem;
+    background-color: transparent;
+    border: 3px solid grey;
+    outline: none;
 }
 
 textarea:focus
