@@ -39,12 +39,11 @@ const renderDetails = async() => {
         console.log('update button pressed.');
 
         let doc = {
-            "id": "640cb328d851f265dcde6973",
+            "id": post._id,
             article_image: form.image.value,
             title: form.title.value,
             body: form.blogcontent.value,
         };
-        console.log(doc);
 
         let options = {
             method: 'PUT',
