@@ -1,0 +1,32 @@
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{
+    margin: 0;
+    font-family:'poppins';
+    background-color: rgba(229, 229, 203, 100%);
+}
+
+h3, p
+{
+    margin: 0; padding: 0;
+
+}
+
+.wrapper
+{
+    width: 70vw;
+    margin: 0 auto;
+    height: 100vh;
+    align-content: center;
+}
+
+.msg-box
+{
+    height: 50vh;
+    width: 50vw;
+    
+}

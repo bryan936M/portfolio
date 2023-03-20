@@ -112,6 +112,13 @@ main
     font-size: 20px;
 }
 
+.card .head_img
+{
+    height: 89px;
+    width: 273px;
+    object-fit: cover;
+}
+
 .card .read-more
 {
     display: flex;

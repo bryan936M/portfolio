@@ -1,29 +1,35 @@
-// login validation javascript
-
+//ACCESS THE FORM ELEMENT
 const form = document.querySelector('form');
-const email = document.querySelector('.email_input');
-const password = document.querySelector('.pass_input');
+
 
 const verify = async(e) =>{
     e.preventDefault();
-    console.log('it works');
-    console.log(email + password);
 
-    const res = await fetch('https://erin-cautious-alligator.cyclic.app/users');
-    const user_array = await res.json();
-    console.log(user_array);
+    //SAVE THE LOGIN INFO
+    const loginInfo = {
+        "eml": form.email.value,
+        "pwd": form.pw.value
+    };
+    console.log(loginInfo);
 
-    user_array.forEach(user => {
-        if(user.email === email.value && user.password == password.value){
-            window.location.replace('admin_home.html');
-        } else {
-            //window.location.replace('index.html');
+    //SEND THE LOGIN INFO FOR VERIFICATION
+    const res = await fetch('https://cute-pear-sheep-slip.cyclic.app/authenticate', {
+        method: 'POST',
+        body: JSON.stringify(loginInfo),
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json'
         }
     });
 
-    
+    //RECEIVE THE ACCESS TOKEN || ERROR MESSAGES
+    const result = await res.json();
+    console.log(result);
 
-
+    //SAVE THE ACCESS TOKEN IN MEMORY
+    //REDIRECT TO ADMIN HOME PAGE
 };
 
+
+//LISTEN FOR THE SUBMIT EVENT IN THE FORM
 form.addEventListener('submit', verify);
