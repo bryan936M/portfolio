@@ -1,8 +1,8 @@
 //ACCESS THE FORM ELEMENT
 const form = document.querySelector('form');
 
-
-const verify = async(e) =>{
+//LISTEN FOR THE SUBMIT EVENT IN THE FORM AND ...
+form.addEventListener('submit', async(e) =>{
     e.preventDefault();
 
     //SAVE THE LOGIN INFO
@@ -20,16 +20,33 @@ const verify = async(e) =>{
         headers: {
             'Content-Type': 'application/json'
         }
+    }).catch((error) => {
+        Toastify({
+            text: error.message,
+            duration: 3000, // Time in milliseconds
+            backgroundColor: "linear-gradient(to right, #ffcccc, #ff6666)"
+        }).showToast();
     });
 
     //RECEIVE THE ACCESS TOKEN || ERROR MESSAGES
     const result = await res.json();
-    console.log(result);
 
     //SAVE THE ACCESS TOKEN IN MEMORY
-    //REDIRECT TO ADMIN HOME PAGE
-};
-
-
-//LISTEN FOR THE SUBMIT EVENT IN THE FORM
-form.addEventListener('submit', verify);
+    if(result.accessToken){
+        localStorage.setItem("accessToken", result.accessToken);
+        //REDIRECT TO ADMIN HOME PAGE
+        Toastify({
+            text: "LOGGED IN!",
+            duration: 3000, // Time in milliseconds
+            backgroundColor: "linear-gradient(to bottom, #00c853, #00e676)"
+        }).showToast();
+        location.href = "/admin_home.html";
+    }else if ( result.message){
+        Toastify({
+            text: result.message,
+            duration: 3000, // Time in milliseconds
+            backgroundColor: "linear-gradient(to right, #ffcccc, #ff6666)"
+        }).showToast();
+    }
+    
+});
